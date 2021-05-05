@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: #283845;
+            
+        }
+        h1{
+                color: #B8B08D ;
+            }
+            div{
+                color: lightgrey;
+            }
+        input{
+            padding: 10px;
+            margin: 10px;
+            width: 200px;
+        }
+  input::-webkit-inner-spin-button,
+  input::-webkit-outer-spin-button{
+  -webkit-appearance: none;
+   }
+</style>
+</head>
+<body>
+    <div>
+        <div style="text-align:center">
+            <h1 >Simple Interest</h1>
+            <form action="">
+            Enter Principal Amount:<input  type="number" id="p"> <br>
+            Enter Rate Of interest: <input  style="margin-left: 16px;" type="number" name="" id="r"> <br>
+            Enter Time (in months): <input style="margin-left: 12px; " type="number" id="t"><br>
+            <br>
+            <button style="margin-left: 50px; padding: 12px; padding-inline: 15px;" type="button" onclick="simple()" value="calculate">calc</button>
+            </form>
+            </div>
+            <p id="s" style="text-align: center; "></p>
+        
+    </div>
+     <script type="text/javascript">
+        document.getElementById("s").disabled="true";
+        function simple()
+        {
+           var p = document.getElementById("p").value;
+           var r = document.getElementById("r").value;
+           var t = document.getElementById("t").value;
+           var si = p*r/(100);
+           document.getElementById("s").innerHTML = "the simple interest: &#8377; "+si;
+
+
+        }
+     </script>
+</body>
+</html>
